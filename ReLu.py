@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Tensorflow with RELUS
+This example also indicates a bacis operation in tensorflow of
+buiding a simple NN
 """
 
 # Solution is available in the other "solution.py" tab
@@ -26,10 +28,10 @@ biases = [
     tf.Variable(tf.zeros(3)),
     tf.Variable(tf.zeros(2))]
 
-# Input
+# Input - input_layer
 features = tf.Variable([[1.0, 2.0, 3.0, 4.0], [-1.0, -2.0, -3.0, -4.0], [11.0, 12.0, 13.0, 14.0]])
 
-# TODO: Create Model
+# TODO: Create Model (Layers,hidden_layer, output_layer)
 hidden_layer = tf.add(tf.matmul(features, weights[0]), biases[0])
 hidden_layer = tf.nn.relu(hidden_layer)
 
